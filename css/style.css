@@ -1,0 +1,66 @@
+body {
+  background-color: #333;
+}
+
+.wrapper {
+  padding: 50px;
+  height: 100%;
+}
+
+.container {
+  font-size: 50px;
+  color: rgb(230, 107, 0);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  height: 200px;
+  background-color: #444444;
+  border-radius: 50px;
+}
+
+.block {
+  background-color: rgb(68, 68, 68);
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50px;
+}
+
+/* ------------------------------------------------------- */
+.block {
+  animation: move-block 3s linear infinite alternate, color-block 3s linear 3s infinite alternate;
+}
+
+.block:hover {
+  animation-name: paused;
+}
+
+@keyframes move-block {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    border-radius: 100px;
+  }
+
+  100% {
+    left: calc(100% - 200px);
+  }
+}
+
+@keyframes color-block {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.615);
+  }
+
+  100% {
+    left: calc(100% - 200px);
+  }
+}
